@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utkal Ratna | Agro Farm Products & Global Export</title>
+
+  <meta name="description" content="Utkal Ratna - Premium agro & farm products from India. Fresh, quality-assured items supplied to buyers and importers across the globe.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #050816;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(14px);
+      background: rgba(5, 8, 22, 0.9);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .logo span {
+      color: #facc15;
+    }
+
+    .nav-links a {
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: #d4d4d4;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #facc15;
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2.3rem 1.5rem 3.5rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2.2rem;
+      align-items: center;
+      padding: 2.4rem 1.8rem;
+      border-radius: 24px;
+      background: radial-gradient(circle at top left, #1b263b, #020617);
+      border: 1px solid rgba(148, 163, 184, 0.28);
+      box-shadow: 0 25px 80px rgba(15, 23, 42, 0.8);
+    }
+
+    .hero-tag {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #9ca3af;
+      margin-bottom: 0.45rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-title span {
+      color: #facc15;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: #e5e7eb;
+      max-width: 34rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .highlight {
+      color: #bbf7d0;
+      font-weight: 500;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      padding: 0.75rem 1.35rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #22c55e, #facc15);
+      color: #052e16;
+      font-weight: 600;
+      box-shadow: 0 18px 40px rgba(34, 197, 94, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 55px rgba(34, 197, 94, 0.55);
+    }
+
+    .btn-ghost {
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+    }
+
+    .btn-ghost:hover {
+      border-color: #facc15;
+      background: rgba(15, 23, 42, 0.98);
+      transform: translateY(-1px);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.4rem;
+    }
+
+    .pill {
+      font-size: 0.72rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #e5e7eb;
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .hero-card {
+      justify-self: center;
+      width: 100%;
+      max-width: 290px;
+      padding: 1.7rem 1.5rem;
+      border-radius: 22px;
+      background: radial-gradient(circle at top, #111827, #020617);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 22px 60px rgba(15, 23, 42, 0.85);
+    }
+
+    .hero-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-card p {
+      font-size: 0.82rem;
+      color: #d1d5db;
+      margin-bottom: 0.7rem;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.8rem;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .stat-row span strong {
+      display: block;
+      font-size: 1rem;
+      color: #f9fafb;
+    }
+
+    section {
+      margin-top: 3.2rem;
+    }
+
+    .section-title {
+      font-size: 1.45rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-bottom: 1.3rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .card {
+      padding: 1.25rem 1.1rem;
+      border-radius: 18px;
+      background: #020617;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.7);
+      font-size: 0.86rem;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .card p {
+      color: #d1d5db;
+      margin-bottom: 0.4rem;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 0.16rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: #9ca3af;
+      margin-top: 0.25rem;
+    }
+
+    .process-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      font-size: 0.86rem;
+    }
+
+    .step {
+      padding: 1rem;
+      border-radius: 16px;
+      border: 1px dashed rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .step span {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #facc15;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .countries {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+    }
+
+    .country-pill {
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+    }
+
+    .contact {
+      margin-top: 3.3rem;
+      padding: 2.1rem 1.6rem;
+      border-radius: 20px;
+      background: radial-gradient(circle at top right, #1e293b, #020617);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      text-align: center;
+    }
+
+    .contact p {
+      font-size: 0.9rem;
+      color: #d1d5db;
+      margin-bottom: 0.6rem;
+    }
+
+    .contact a {
+      color: #facc15;
+      text-decoration: none;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.2rem;
+      text-align: left;
+    }
+
+    .contact-box {
+      padding: 1rem;
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.8);
+      font-size: 0.86rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #6b7280;
+      padding: 1.8rem 0 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .hero-card {
+        order: -1;
+      }
+      .nav-links {
+        display: none;
+      }
+      main {
+        padding-top: 1.6rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">UTKAL<span>RATNA</span></div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#process">Process</a>
+        <a href="#export">Export</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div>
+        <p class="hero-tag">Agro Farm · Export · Global Supply</p>
+        <h1 class="hero-title">
+          Premium <span>agro farm items</span> from India to the world.
+        </h1>
+        <p class="hero-subtitle">
+          <span class="highlight">Utkal Ratna</span> supplies high-quality farm products,
+          sourced from trusted growers and processed with strict quality checks,
+          for buyers and importers across the globe.
+        </p>
+
+        <div class="hero-buttons">
+          <!-- Replace PHONE_NUMBER with your WhatsApp number, e.g. 9198xxxxxxxx -->
+          <a class="btn-primary" href="https://wa.me/91XXXXXXXXXX?text=Hello%20Utkal%20Ratna,%20I%20am%20interested%20in%20your%20agro%20products." target="_blank">
+            WhatsApp Enquiry
+          </a>
+          <a class="btn-ghost" href="#products">View Products</a>
+        </div>
+
+        <div class="pill-row">
+          <span class="pill">Bulk Orders</span>
+          <span class="pill">Export Quality</span>
+          <span class="pill">Global Shipping</span>
+          <span class="pill">Reliable Partnerships</span>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h3>Why Utkal Ratna?</h3>
+        <p>
+          We focus on clean sourcing, transparent processes, and long-term
+          relationships with buyers, traders, and import houses.
+        </p>
+        <div class="stat-row">
+          <span><strong>100%</strong> Quality Checked</span>
+          <span><strong>Global</strong> Export Focus</span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2 class="section-title">About Utkal Ratna</h2>
+      <p class="section-subtitle">
+        An emerging agro & farm products brand committed to quality, consistency, and
+        on-time delivery for international buyers.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Who We Are</h3>
+          <p>
+            Utkal Ratna works directly with farmers and local suppliers to provide
+            export-ready agro items. Our focus is on freshness, hygiene, and proper
+            packaging suitable for long-distance shipping.
+          </p>
+          <span class="tag">Agro Exporter</span>
+        </article>
+
+        <article class="card">
+          <h3>What We Offer</h3>
+          <p>
+            We supply a range of agro products like mushrooms, grains, pulses,
+            spices, vegetables and other farm items in bulk quantities as per buyer
+            requirements.
+          </p>
+          <span class="tag">Bulk & Custom Orders</span>
+        </article>
+
+        <article class="card">
+          <h3>Who We Serve</h3>
+          <p>
+            Ideal for importers, wholesalers, supermarkets, distributors, and brands
+            looking for a reliable Indian supplier with consistent quality.
+          </p>
+          <span class="tag">Global Buyers</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products">
+      <h2 class="section-title">Key Agro Products</h2>
+      <p class="section-subtitle">
+        Main product categories we can supply and export. You can customize and update this list anytime.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Fresh Mushrooms</h3>
+          <p>
+            Farm-grown mushrooms with careful handling and quick dispatch to
+            maintain freshness and shelf life.
+          </p>
+          <span class="tag">Fresh · Export</span>
+        </article>
+
+        <article class="card">
+          <h3>Grains & Pulses</h3>
+          <p>
+            High quality rice, lentils, and other pulses suitable for bulk
+            packaging and long-term storage.
+          </p>
+          <span class="tag">Bulk Supply</span>
+        </article>
+
+        <article class="card">
+          <h3>Spices & Agro Commodities</h3>
+          <p>
+            Select whole spices and other agro commodities sourced from verified
+            suppliers as per buyer demand.
+          </p>
+          <span class="tag">Custom Selection</span>
+        </article>
+
+        <article class="card">
+          <h3>Fresh Vegetables</h3>
+          <p>
+            Seasonal vegetables, carefully sorted and packed for safe export
+            shipping and distribution.
+          </p>
+          <span class="tag">Seasonal</span>
+        </article>
+
+        <article class="card">
+          <h3>Custom Orders</h3>
+          <p>
+            Need a specific agro product? Share your requirement and we will
+            source and pack as per your specification.
+          </p>
+          <span class="tag">Buyer-Specific</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+      <h2 class="section-title">How Our Export Process Works</h2>
+      <p class="section-subtitle">
+        Simple and transparent steps for international buyers and import partners.
+      </p>
+
+      <div class="process-list">
+        <div class="step">
+          <span>Step 1</span>
+          <strong>Send Your Requirement</strong>
+          <p>
+            Share product list, specifications, quantity, and destination port via
+            email or WhatsApp.
+          </p>
+        </div>
+
+        <div class="step">
+          <span>Step 2</span>
+          <strong>Quotation & Samples</strong>
+          <p>
+            We provide pricing, packaging options, and sample details if required.
+          </p>
+        </div>
+
+        <div class="step">
+          <span>Step 3</span>
+          <strong>Processing & Packing</strong>
+          <p>
+            Products are sourced, checked, and packed according to export norms
+            and buyer instructions.
+          </p>
+        </div>
+
+        <div class="step">
+          <span>Step 4</span>
+          <strong>Dispatch & Documentation</strong>
+          <p>
+            Shipment arranged with proper documentation, coordination with
+            logistics & freight partners.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPORT FOCUS -->
+    <section id="export">
+      <h2 class="section-title">Global Export Focus</h2>
+      <p class="section-subtitle">
+        Open to buyers and partners from multiple regions across the world.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Target Markets</h3>
+          <p>Currently open to enquiries from:</p>
+          <div class="countries">
+            <span class="country-pill">Middle East</span>
+            <span class="country-pill">Europe</span>
+            <span class="country-pill">Asia</span>
+            <span class="country-pill">Africa</span>
+            <span class="country-pill">Other Regions (on request)</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Quality & Compliance</h3>
+          <p>
+            We aim to follow international quality standards, with proper packing,
+            labelling, and documentation support as per buyer and country norms.
+          </p>
+          <span class="tag">Quality First</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <h2 class="section-title">Business Enquiries & Contact</h2>
+      <p>
+        For export enquiries, bulk orders, or collaboration, feel free to reach out.
+        We will respond with details as soon as possible.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-box">
+          <strong>Email</strong>
+          <p>
+            Send your detailed requirement to:<br />
+            <!-- Replace this with your real email -->
+            <a href="mailto:anshansh76820@gmail.com">anshansh76820@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="contact-box">
+          <strong>WhatsApp</strong>
+          <p>
+            Share your product list and destination via WhatsApp:<br />
+            <!-- Replace PHONE_NUMBER here also -->
+            <a href="https://wa.me/91-9987544538?text=Hello%20Utkal%20Ratna,%20I%20want%20to%20discuss%20agro%20product%20export.">
+              +91-9987544538
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-box">
+          <strong>Basic Details to Share</strong>
+          <p>
+            • Product names & specs<br />
+            • Quantity (per month / per order)<br />
+            • Destination country & port<br />
+            • Packing preference (bags / boxes / etc.)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Utkal Ratna. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    // Auto-update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
